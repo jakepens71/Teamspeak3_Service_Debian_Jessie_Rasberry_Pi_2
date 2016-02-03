@@ -9,4 +9,6 @@ ExecReload=/bin/kill
 KillMode=process
 Restart=on-failure
 
-
+[Install]
+WantedBy=multi-user.target
+Alias=ts3.service
