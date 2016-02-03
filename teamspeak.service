@@ -1,0 +1,12 @@
+[Unit]
+Description=Start Teamspeak
+After=network.target auditd.service
+
+[Service]
+User=teamspeak
+ExecStart=/opt/exagear/images/debian-8-wine2g/usr/local/teamspeak/teamspeak3-server_linux_x86/ts3server_starts$
+ExecReload=/bin/kill
+KillMode=process
+Restart=on-failure
+
+
